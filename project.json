@@ -1,0 +1,27 @@
+{
+    "project_type": "javascript",
+
+    "debugMode": 0,
+    "showFPS": false,
+    "frameRate": 60,
+    "noCache": false,
+    "id": "game",
+    "renderMode": 2,
+    "engineDir": "frameworks/cocos2d-html5",
+    "modules": ["cocos2d", "ccui", "chipmunk"],
+    "jsList": [
+        "/src/app.js",
+        "/src/storage.js",
+        "/src/ui.js",
+        "/src/models/map.js",
+        "/src/models/tile-map.js",
+        "/src/models/car.js",
+        "/src/layers/main-menu.js",
+        "/src/layers/prepare-race.js",
+        "/src/layers/race-track.js",
+        "/src/scenes/main-menu.js",
+        "/src/scenes/prepare-race.js",
+        "/src/scenes/race-track.js",
+        "/src/resources.js"
+    ]
+}

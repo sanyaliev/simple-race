@@ -1,0 +1,16 @@
+{
+  "name": "fx",
+  "version": "1.0.0",
+  "description": "Simple race game (cocos2d-html5)",
+  "main": "main.js",
+  "scripts": {
+    "start": "gulp server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "sanyaliev",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1"
+  }
+}
