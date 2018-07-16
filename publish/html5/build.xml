@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<project name="Javascript compress project" basedir="/Users/sanyaliev/Develop/gamedev/l/simple-race" default="compile">
+<project name="Javascript compress project" basedir="/Users/sanyaliev/Develop/gamedev/simple-race" default="compile">
 
     <taskdef name="jscomp" classname="com.google.javascript.jscomp.ant.CompileTask"
              classpath="/usr/local/Frameworks/cocos2d-x-3.9/tools/cocos2d-console/plugins/plugin_compile/build_web/bin/compiler-1.7.jar"/>
@@ -8,11 +8,11 @@
         <jscomp compilationLevel="simple" 
                 warning="quiet"
                 debug="false" 
-                output="/Users/sanyaliev/Develop/gamedev/l/simple-race/publish/html5/game.min.js"
+                output="/Users/sanyaliev/Develop/gamedev/simple-race/publish/html5/game.min.js"
                 languagein="ECMASCRIPT5"
                 
                 >
-            <sources dir="/Users/sanyaliev/Develop/gamedev/l/simple-race/frameworks/cocos2d-html5">
+            <sources dir="/Users/sanyaliev/Develop/gamedev/simple-race/frameworks/cocos2d-html5">
                 <file name="CCBoot.js"/>
                 <file name="cocos2d/core/event-manager/CCEventHelper.js"/>
                 <file name="CCDebugger.js"/>
@@ -219,12 +219,15 @@
                 <file name="/src/ui.js"/>
                 <file name="/src/models/map.js"/>
                 <file name="/src/models/tile-map.js"/>
+                <file name="/src/models/oil-object.js"/>
                 <file name="/src/models/car.js"/>
                 <file name="/src/layers/main-menu.js"/>
                 <file name="/src/layers/prepare-race.js"/>
                 <file name="/src/layers/race-track.js"/>
+                <file name="/src/layers/result-list.js"/>
                 <file name="/src/scenes/main-menu.js"/>
                 <file name="/src/scenes/prepare-race.js"/>
+                <file name="/src/scenes/result-list.js"/>
                 <file name="/src/scenes/race-track.js"/>
                 <file name="/src/resources.js"/>
                 <file name="main.js"/>
