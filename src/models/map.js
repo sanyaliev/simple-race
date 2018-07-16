@@ -141,7 +141,9 @@ cc.Map = cc.Node.extend({
             }
 
             if (success && this.setupStartPoint(path)) {
-                return path;
+                return path.sort(function(a, b) {
+                    return a.order - b.order;
+                });
             }
         }
     },

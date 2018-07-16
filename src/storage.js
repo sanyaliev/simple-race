@@ -15,7 +15,8 @@ cc.Storage = cc.Class.extend({
 		type: '',
 		size: 0,
 		drift: false
-	}
+	},
+	topPlayerList: []
 });
 
 cc.storage = new cc.Storage();

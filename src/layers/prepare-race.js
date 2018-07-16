@@ -12,6 +12,7 @@ var PrepareRaceLayer = cc.Layer.extend({
         this.bg.setPosition(size.width / 2,size.height / 2);
         this.bg.setOpacity(490);
         this.bg.setRotation(180);
+        this.bg.setScale(1.5);
         this.addChild(this.bg, 0);
 
         // add go ride btn
@@ -24,7 +25,7 @@ var PrepareRaceLayer = cc.Layer.extend({
 
         // add choice car label
         this.choiceCarLabel = new cc.LabelTTF('Choice race car:', resourcesMap.kenVectorFontTTF.name, 27);
-        this.choiceCarLabel.setPosition(size.width * 0.5, size.height * 0.75);
+        this.choiceCarLabel.setPosition(size.width * 0.5, size.height * 0.7);
         this.choiceCarLabel.enableShadow(cc.color(0, 0, 0, 0.5), cc.size(3, -3), 3);
         this.addChild(this.choiceCarLabel, 0);
 
@@ -34,16 +35,16 @@ var PrepareRaceLayer = cc.Layer.extend({
                 self.goRideButton.setEnabled(true);
             }
         });
-        this.redCarButton.setPosition(size.width * 0.4, size.height * 0.65);
+        this.redCarButton.setPosition(size.width * 0.4, size.height * 0.6);
         this.addChild(this.redCarButton, 1);
 
         // add green car
-        this.greenCarButton = new CarButton('green', 2, 200, 80, 4, 7, 0.35, false, 0.65, function() {
+        this.greenCarButton = new CarButton('green', 2, 200, 80, 4, 7, 0.35, false, 0.6, function() {
             if (cc.storage.selectedMap.type) {
                 self.goRideButton.setEnabled(true);
             }
         });
-        this.greenCarButton.setPosition(size.width * 0.45, size.height * 0.65);
+        this.greenCarButton.setPosition(size.width * 0.45, size.height * 0.6);
         this.addChild(this.greenCarButton, 1);
 
         // add blue car
@@ -52,7 +53,7 @@ var PrepareRaceLayer = cc.Layer.extend({
                 self.goRideButton.setEnabled(true);
             }
         });
-        this.blueCarButton.setPosition(size.width * 0.5, size.height * 0.65);
+        this.blueCarButton.setPosition(size.width * 0.5, size.height * 0.6);
         this.addChild(this.blueCarButton, 1);
 
         // add black car
@@ -61,7 +62,7 @@ var PrepareRaceLayer = cc.Layer.extend({
                 self.goRideButton.setEnabled(true);
             }
         });
-        this.blackCarButton.setPosition(size.width * 0.55, size.height * 0.65);
+        this.blackCarButton.setPosition(size.width * 0.55, size.height * 0.6);
         this.addChild(this.blackCarButton, 1);
 
         // add yellow car
@@ -70,12 +71,12 @@ var PrepareRaceLayer = cc.Layer.extend({
                 self.goRideButton.setEnabled(true);
             }
         });
-        this.yellowCarButton.setPosition(size.width * 0.6, size.height * 0.65);
+        this.yellowCarButton.setPosition(size.width * 0.6, size.height * 0.6);
         this.addChild(this.yellowCarButton, 1);
 
         // add choice track label
         this.choiceMapLabel = new cc.LabelTTF('Choice track:', resourcesMap.kenVectorFontTTF.name, 27);
-        this.choiceMapLabel.setPosition(size.width * 0.5, size.height * 0.55);
+        this.choiceMapLabel.setPosition(size.width * 0.5, size.height * 0.5);
         this.choiceMapLabel.enableShadow(cc.color(0, 0, 0, 0.5), cc.size(3, -3), 3);
         this.addChild(this.choiceMapLabel, 0);
 
@@ -85,7 +86,7 @@ var PrepareRaceLayer = cc.Layer.extend({
                 self.goRideButton.setEnabled(true);
             }
         });
-        this.asphaltMapButton.setPosition(size.width * 0.45, size.height * 0.45);
+        this.asphaltMapButton.setPosition(size.width * 0.45, size.height * 0.4);
         this.addChild(this.asphaltMapButton, 1);
 
         // add dirt map button
@@ -94,7 +95,7 @@ var PrepareRaceLayer = cc.Layer.extend({
                 self.goRideButton.setEnabled(true);
             }
         });
-        this.dirtMapButton.setPosition(size.width * 0.55, size.height * 0.45);
+        this.dirtMapButton.setPosition(size.width * 0.55, size.height * 0.4);
         this.addChild(this.dirtMapButton, 1);
     }
 });

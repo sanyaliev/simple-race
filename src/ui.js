@@ -12,11 +12,13 @@ var Button = ccui.Button.extend({
 
     switch (color) {
       case 'red':
-        this.loadTextures('red_button01.png', 'red_button13.png', 'grey_button03.png', ccui.Widget.PLIST_TEXTURE); break;
+        this.loadTextures('red_button01.png', 'red_button13.png', 'grey_button03.png', ccui.Widget.PLIST_TEXTURE);
+        break;
       case 'green':
-        this.loadTextures('green_button04.png', 'green_button02.png', 'grey_button03.png', ccui.Widget.PLIST_TEXTURE); break;
-      default:
         this.loadTextures('green_button04.png', 'green_button02.png', 'grey_button03.png', ccui.Widget.PLIST_TEXTURE);
+        break;
+      default:
+        this.loadTextures('grey_button03.png', 'green_button03.png', 'grey_button03.png', ccui.Widget.PLIST_TEXTURE);
         this.setOpacity(0);
     }
 
@@ -58,7 +60,8 @@ var CarButton = ccui.Button.extend({
     };
 
     this.createButton();
-    this.createListeners(callback)
+    this.createListeners(callback);
+    this.resetEvent();
   },
   createButton: function() {
     var texture = 'car_' + this.currentCar.color + '_small_' + this.currentCar.number + '.png';
@@ -124,7 +127,8 @@ var MapButton = ccui.Button.extend({
     };
 
     this.createButton();
-    this.createListeners(callback)
+    this.createListeners(callback);
+    this.resetEvent();
   },
   createButton: function() {
     var texture = '';
@@ -143,6 +147,7 @@ var MapButton = ccui.Button.extend({
     cc.eventManager.addCustomListener('resetSelectedMapButton', function() {
       self.resetEvent();
     });
+
     this.addTouchEventListener(this.touchEvent(callback), this);
   },
   resetEvent: function() {
@@ -159,7 +164,7 @@ var MapButton = ccui.Button.extend({
       if (type == ccui.Widget.TOUCH_ENDED) {
         cc.eventManager.dispatchCustomEvent('resetSelectedMapButton');
 
-    this.setScale(0.7);
+        this.setScale(0.7);
 
         cc.storage.selectedMap.type = this.currentMap.type;
         cc.storage.selectedMap.size = this.currentMap.size;

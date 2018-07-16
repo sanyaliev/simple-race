@@ -8,6 +8,7 @@ var MainMenuLayer = cc.Layer.extend({
         this.bg = new cc.Sprite(resourcesMap.menuBgPNG.src);
         this.bg.setPosition(cc.winSize.width / 2, cc.winSize.height / 2);
         this.bg.setOpacity(490);
+        this.bg.setScale(1.5);
         this.addChild(this.bg, 0);
 
         // add game name label

@@ -15,12 +15,15 @@
         "/src/ui.js",
         "/src/models/map.js",
         "/src/models/tile-map.js",
+        "/src/models/oil-object.js",
         "/src/models/car.js",
         "/src/layers/main-menu.js",
         "/src/layers/prepare-race.js",
         "/src/layers/race-track.js",
+        "/src/layers/result-list.js",
         "/src/scenes/main-menu.js",
         "/src/scenes/prepare-race.js",
+        "/src/scenes/result-list.js",
         "/src/scenes/race-track.js",
         "/src/resources.js"
     ]
