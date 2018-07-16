@@ -8,7 +8,7 @@ var RaceTrackLayer = cc.Layer.extend({
 
         this.raceStarted = false;
         this.lap = 0;
-        this.maxLaps = 1;
+        this.maxLaps = 3;
 
         this.createListeners();
 
@@ -19,7 +19,7 @@ var RaceTrackLayer = cc.Layer.extend({
         this.addCars();
         this.addObjects();
         this.addUIElements();
-        this.startCountdown(0);
+        this.startCountdown(3);
 
         this.scheduleUpdate();
     },
