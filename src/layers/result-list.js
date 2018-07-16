@@ -30,7 +30,6 @@ var ResultListLayer = cc.Layer.extend({
 
         if (list.length) {
             for (var i = 0; i <= list.length - 1; i++) {
-                console.log(i, list[i]);
                 var number = i + 1,
                     mapType = list[i].mapType,
                     mapLength = list[i].mapLength,
